@@ -1,10 +1,11 @@
 // Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
 // License: GNU General Public License v3. See license.txt
-frappe.provide("erpnext");
+frappe.provide("haloerp");
 frappe.provide("haloerp.utils");
 frappe.provide("haloerp.stock.utils");
+window.erpnext = window.haloerp;
 
-$.extend(erpnext, {
+$.extend(haloerp, {
 	get_currency: function (company) {
 		if (!company && cur_frm) company = cur_frm.doc.company;
 		if (company)

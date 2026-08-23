@@ -1,6 +1,10 @@
 // Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
 // License: GNU General Public License v3. See license.txt
 
+window.haloerp = window.haloerp || {};
+window.haloerp.stock = window.haloerp.stock || {};
+window.erpnext = window.haloerp;
+
 // Keep these in sync with QI_INCOMING_PURPOSES / QI_OUTGOING_PURPOSES /
 // stock_entry_row_requires_inspection in stock/services/quality_inspection_service.py.
 haloerp.stock = haloerp.stock || {};
