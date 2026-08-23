@@ -10,7 +10,7 @@ frappe.pages["setup-wizard"].on_page_load = function (wrapper) {
 frappe.setup.on("before_load", function () {
 	if (
 		frappe.boot.setup_wizard_completed_apps?.length &&
-		frappe.boot.setup_wizard_completed_apps.includes("erpnext")
+		frappe.boot.setup_wizard_completed_apps.includes("haloerp")
 	) {
 		return;
 	}
