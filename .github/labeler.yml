@@ -1,55 +1,55 @@
 accounts:
-- erpnext/accounts/*
-- erpnext/controllers/accounts_controller.py
-- erpnext/controllers/taxes_and_totals.py
+- haloerp/accounts/*
+- haloerp/controllers/accounts_controller.py
+- haloerp/controllers/taxes_and_totals.py
 
 stock:
-- erpnext/stock/*
-- erpnext/controllers/stock_controller.py
-- erpnext/controllers/item_variant.py
+- haloerp/stock/*
+- haloerp/controllers/stock_controller.py
+- haloerp/controllers/item_variant.py
 
 assets:
-- erpnext/assets/*
+- haloerp/assets/*
 
 regional:
-- erpnext/regional/*
+- haloerp/regional/*
 
 selling:
-- erpnext/selling/*
-- erpnext/controllers/selling_controller.py
+- haloerp/selling/*
+- haloerp/controllers/selling_controller.py
 
 buying:
-- erpnext/buying/*
-- erpnext/controllers/buying_controller.py
+- haloerp/buying/*
+- haloerp/controllers/buying_controller.py
 
 support:
-- erpnext/support/*
+- haloerp/support/*
 
 POS:
 - pos*
 
 ecommerce:
-- erpnext/e_commerce/*
+- haloerp/e_commerce/*
 
 maintenance:
-- erpnext/maintenance/*
+- haloerp/maintenance/*
 
 manufacturing:
-- erpnext/manufacturing/*
+- haloerp/manufacturing/*
 
 crm:
-- erpnext/crm/*
+- haloerp/crm/*
 
 HR:
-- erpnext/hr/*
+- haloerp/hr/*
 
 payroll:
-- erpnext/payroll*
+- haloerp/payroll*
 
 projects:
-- erpnext/projects/*
+- haloerp/projects/*
 
 # Any python files modifed but no test files modified
 needs-tests:
-- any: ['erpnext/**/*.py']
-  all: ['!erpnext/**/test*.py']
+- any: ['haloerp/**/*.py']
+  all: ['!haloerp/**/test*.py']

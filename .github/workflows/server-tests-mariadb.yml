@@ -60,10 +60,10 @@ jobs:
     # Dedicated scale set (fat cpu request) so the build+reinstall runs at full speed, uncontended
     # by the many thin test shards. Same CI image + /home/ci path + 127.0.0.1 DB as the shards,
     # so the packaged bench (and its venv) transplants cleanly.
-    runs-on: erpnext-arc-setup
+    runs-on: haloerp-arc-setup
     timeout-minutes: 40
     container:
-      image: ghcr.io/frappe/erpnext-ci-mariadb:py3.14-node24
+      image: ghcr.io/frappe/haloerp-ci-mariadb:py3.14-node24
       credentials:
         username: ${{ secrets.GHCR_USERNAME || github.actor }}
         password: ${{ secrets.GHCR_TOKEN || github.token }}
@@ -111,7 +111,7 @@ jobs:
         run: |
           su -m "${ERPNEXT_CI_USER:-frappe}" -s /bin/bash <<'EOF'
           cd ~/frappe-bench/
-          bench --site test_site run-tests --lightmode --module erpnext.tests.bootstrap_test_data
+          bench --site test_site run-tests --lightmode --module haloerp.tests.bootstrap_test_data
           EOF
 
       # Clean shutdown (consistent InnoDB datadir), then stage it inside the bench for packaging.
@@ -147,10 +147,10 @@ jobs:
   test:
     name: Python Unit Tests
     needs: setup
-    runs-on: erpnext-arc
+    runs-on: haloerp-arc
     timeout-minutes: 60
     container:
-      image: ghcr.io/frappe/erpnext-ci-mariadb:py3.14-node24
+      image: ghcr.io/frappe/haloerp-ci-mariadb:py3.14-node24
       credentials:
         username: ${{ secrets.GHCR_USERNAME || github.actor }}
         password: ${{ secrets.GHCR_TOKEN || github.token }}
@@ -186,7 +186,7 @@ jobs:
           cd ~/frappe-bench/
           coverage_flag=""
           if [ "$WITH_COVERAGE" = "true" ]; then coverage_flag="--with-coverage"; fi
-          bench --site test_site run-parallel-tests --lightmode --app erpnext \
+          bench --site test_site run-parallel-tests --lightmode --app haloerp \
             --total-builds ${{ strategy.job-total }} \
             --build-number ${{ matrix.container }} \
             $coverage_flag

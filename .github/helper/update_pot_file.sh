@@ -9,12 +9,12 @@ bench -v init frappe-bench --skip-assets --skip-redis-config-generation --python
 cd ./frappe-bench || exit
 
 echo "Get ERPNext..."
-bench get-app --skip-assets erpnext "${GITHUB_WORKSPACE}"
+bench get-app --skip-assets haloerp "${GITHUB_WORKSPACE}"
 
 echo "Generating POT file..."
-bench generate-pot-file --app erpnext
+bench generate-pot-file --app haloerp
 
-cd ./apps/erpnext || exit
+cd ./apps/haloerp || exit
 
 echo "Configuring git user..."
 git config user.email "developers@erpnext.com"
@@ -30,7 +30,7 @@ branch_name="pot_${BASE_BRANCH}_${isodate}"
 git checkout -b "${branch_name}"
 
 echo "Commiting changes..."
-git add erpnext/locale/main.pot
+git add haloerp/locale/main.pot
 git commit -m "chore: update POT file"
 
 gh auth setup-git

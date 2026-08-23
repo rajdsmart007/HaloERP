@@ -3,22 +3,22 @@
 # These owners will be the default owners for everything in
 # the repo. Unless a later match takes precedence,
 
-erpnext/accounts/               @ruthra-kumar
-erpnext/assets/                 @khushi8112
-erpnext/regional                @ruthra-kumar
-erpnext/selling                 @ruthra-kumar
+haloerp/accounts/               @ruthra-kumar
+haloerp/assets/                 @khushi8112
+haloerp/regional                @ruthra-kumar
+haloerp/selling                 @ruthra-kumar
 banking/                        @nikkothari22
 
-erpnext/buying/                 @rohitwaghchaure @mihir-kandoi
-erpnext/maintenance/            @rohitwaghchaure @mihir-kandoi
-erpnext/manufacturing/          @rohitwaghchaure @mihir-kandoi
-erpnext/quality_management/     @rohitwaghchaure @mihir-kandoi
-erpnext/stock/                  @rohitwaghchaure @mihir-kandoi
-erpnext/subcontracting/         @mihir-kandoi
-erpnext/projects/               @nishkagosalia
+haloerp/buying/                 @rohitwaghchaure @mihir-kandoi
+haloerp/maintenance/            @rohitwaghchaure @mihir-kandoi
+haloerp/manufacturing/          @rohitwaghchaure @mihir-kandoi
+haloerp/quality_management/     @rohitwaghchaure @mihir-kandoi
+haloerp/stock/                  @rohitwaghchaure @mihir-kandoi
+haloerp/subcontracting/         @mihir-kandoi
+haloerp/projects/               @nishkagosalia
 
-erpnext/controllers/            @ruthra-kumar @rohitwaghchaure @mihir-kandoi
-erpnext/patches/                @ruthra-kumar @rohitwaghchaure @mihir-kandoi
+haloerp/controllers/            @ruthra-kumar @rohitwaghchaure @mihir-kandoi
+haloerp/patches/                @ruthra-kumar @rohitwaghchaure @mihir-kandoi
 
 .github/                        @ruthra-kumar @mihir-kandoi
 pyproject.toml                  @ruthra-kumar

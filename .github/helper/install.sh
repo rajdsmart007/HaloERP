@@ -332,7 +332,7 @@ run_ci_step "Get payments app" bench get-app payments --branch develop
 # Enable with CI_SKIP_ERPNEXT_ASSETS=1 to test; if PDF tests fail, unset it.
 erpnext_get_app_args=()
 if [ "${CI_SKIP_ERPNEXT_ASSETS:-0}" = "1" ]; then erpnext_get_app_args=(--skip-assets); fi
-run_ci_step "Get erpnext app" bench get-app erpnext "${GITHUB_WORKSPACE}" "${erpnext_get_app_args[@]}"
+run_ci_step "Get erpnext app" bench get-app haloerp "${GITHUB_WORKSPACE}" "${erpnext_get_app_args[@]}"
 
 if [ "$TYPE" == "server" ]; then run_ci_step "Setup dev requirements" bench setup requirements --dev; fi
 

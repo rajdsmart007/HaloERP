@@ -1,9 +1,9 @@
 [project]
-name = "erpnext"
+name = "haloerp"
 authors = [
     { name = "Frappe Technologies Pvt Ltd", email = "developers@frappe.io"}
 ]
-description = "Open Source ERP"
+description = "HaloERP Enterprise Resource Planning"
 requires-python = ">=3.14"
 readme = "README.md"
 dynamic = ["version"]
@@ -38,7 +38,7 @@ build-backend = "flit_core.buildapi"
 [tool.frappe.testing.function_type_validation]
 max_module_depth = 1
 skip_namespaces = [
-    "erpnext.deprecation_dumpster",
+    "haloerp.deprecation_dumpster",
 ]
 
 [tool.bench.frappe-dependencies]
@@ -46,8 +46,8 @@ frappe = ">=17.0.0-dev,<18.0.0"
 
 [tool.bench.assets]
 build_dir = "./banking"
-out_dir = "../erpnext/public/banking"
-index_html_path = "../erpnext/www/banking.html"
+out_dir = "../haloerp/public/banking"
+index_html_path = "../haloerp/www/banking.html"
 
 [tool.ruff]
 line-length = 110

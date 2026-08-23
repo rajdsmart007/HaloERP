@@ -1,0 +1,9 @@
+# Copyright (c) 2022, Frappe Technologies Pvt. Ltd. and Contributors
+# See license.txt
+# import frappe
+
+from haloerp.tests.utils import ERPNextTestSuite
+
+
+class TestTelephonyCallType(ERPNextTestSuite):
+	pass
