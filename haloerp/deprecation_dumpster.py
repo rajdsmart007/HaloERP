@@ -36,7 +36,7 @@ class HaloERPDeprecationWarning(Warning):
 	"""Deprecated feature in next version"""
 
 
-class PendingHaloERPDeprecationWarning(ERPNextDeprecationWarning):
+class PendingHaloERPDeprecationWarning(HaloERPDeprecationWarning):
 	"""Deprecated feature in develop beyond next version.
 
 	Warning ignored by default.
@@ -50,15 +50,15 @@ warnings.simplefilter("error", HaloERPDeprecationError)
 warnings.simplefilter("ignore", PendingHaloERPDeprecationWarning)
 
 
-class V15HaloERPDeprecationWarning(ERPNextDeprecationError):
+class V15HaloERPDeprecationWarning(HaloERPDeprecationError):
 	pass
 
 
-class V16HaloERPDeprecationWarning(ERPNextDeprecationWarning):
+class V16HaloERPDeprecationWarning(HaloERPDeprecationWarning):
 	pass
 
 
-class V17HaloERPDeprecationWarning(PendingERPNextDeprecationWarning):
+class V17HaloERPDeprecationWarning(PendingHaloERPDeprecationWarning):
 	pass
 
 
@@ -167,3 +167,7 @@ def get_item_warehouse(item, ctx, overwrite_warehouse, defaults=None):
 ERPNextDeprecationError = HaloERPDeprecationError
 ERPNextDeprecationWarning = HaloERPDeprecationWarning
 PendingERPNextDeprecationWarning = PendingHaloERPDeprecationWarning
+
+V15ERPNextDeprecationWarning = V15HaloERPDeprecationWarning
+V16ERPNextDeprecationWarning = V16HaloERPDeprecationWarning
+V17ERPNextDeprecationWarning = V17HaloERPDeprecationWarning
