@@ -42,4 +42,8 @@ import "./financial_statements.js";
 import "./sales_trends_filters.js";
 import "./purchase_trends_filters.js";
 
-// import { sum } from 'frappe/public/utils/util.js'
+// HaloERP Sales & Procurement Workflow UI
+import "./workflow/halo_workflow_header.js";
+import "./workflow/halo_quantity_progress.js";
+import "./workflow/halo_allocation_dialogs.js";
+import "./workflow/halo_workflow_forms.js";
